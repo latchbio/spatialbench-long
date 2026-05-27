@@ -9,6 +9,8 @@ SpatialBench-Long evaluates AI agents on their ability to arrive at conclusions
 one might publish in a scientific journal, using the raw data and context a
 scientist would have.
 
+Paper: https://latch.bio/spatialbench-long
+
 This public subset contains four evals, their prompt/vocabulary files,
 agent trajectory examples, and run results.
 
@@ -44,19 +46,6 @@ agent trajectory examples, and run results.
 The public trajectory examples contain 16 runs total. Each example includes
 `trajectory.json`, `eval_answer.json`, and `result.json`. Intermediate generated
 analysis files from agent workspaces are intentionally excluded.
-
-## Introduction
-
-Benchmarking long-horizon spatial biology presents new challenges:
-
-- Spatial data is processed through multi-step analysis workflows, often
-  integrated with other assay data.
-- Information about the experimental design and prior literature might be used
-  at each turn.
-- Raw data rarely admits single scientific ground truths.
-- Different conclusions can be drawn from the same dataset, often influenced by
-  the original scientific goal of the study.
-- Each conclusion can come from multiple valid and branching analysis paths.
 
 ## Benchmark Construction Methodology
 
