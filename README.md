@@ -34,19 +34,6 @@ agent trajectory examples, and run results.
 | grok-4.3 | pi | 72 | 3 | 4.17% |
 | gemini-2.5-pro | pi | 72 | 1 | 1.39% |
 
-## Included Evals
-
-| Eval ID | Prompt/Vocabulary | Trajectory examples |
-|---|---:|---:|
-| `opticnerve_merfish_spatial_colocalization_enrichment` | yes | 4 |
-| `visium_perineural_proximity` | yes | 4 |
-| `lineage_metastasis_multilayer_niche_mapping` | yes | 4 |
-| `xenium_organoid_spatial_niche_disruption` | yes | 4 |
-
-The public trajectory examples contain 16 runs total. Each example includes
-`trajectory.json`, `eval_answer.json`, and `result.json`. Intermediate generated
-analysis files from agent workspaces are intentionally excluded.
-
 ## Benchmark Construction Methodology
 
 - Randomized peer attempts
