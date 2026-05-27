@@ -135,6 +135,6 @@
     "test_id": "lineage_metastasis_multilayer_niche_mapping"
   },
   "task": "lineage_metastasis_multilayer_niche_mapping",
-  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/lineage_metastasis_multilayer_niche_mapping.json",
+  "task_spec": "evals/lineage_metastasis_multilayer_niche_mapping/eval.json",
   "trial_index": 1
 }

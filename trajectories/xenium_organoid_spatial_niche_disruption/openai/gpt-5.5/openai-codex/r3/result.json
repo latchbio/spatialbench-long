@@ -74,6 +74,6 @@
     "test_id": "xenium_organoid_spatial_niche_disruption"
   },
   "task": "xenium_organoid_spatial_niche_disruption",
-  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/2_3_A_spatial_niches.json",
+  "task_spec": "evals/xenium_organoid_spatial_niche_disruption/eval.json",
   "trial_index": 3
 }

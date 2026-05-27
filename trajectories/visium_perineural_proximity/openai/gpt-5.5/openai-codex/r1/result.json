@@ -62,6 +62,6 @@
     "test_id": "visium_perineural_proximity"
   },
   "task": "visium_perineural_proximity",
-  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/1_5_visium_perineural_proximity.json",
+  "task_spec": "evals/visium_perineural_proximity/eval.json",
   "trial_index": 1
 }

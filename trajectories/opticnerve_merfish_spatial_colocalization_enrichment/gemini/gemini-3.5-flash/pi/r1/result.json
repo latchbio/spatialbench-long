@@ -105,6 +105,6 @@
     "test_id": "opticnerve_merfish_spatial_colocalization_enrichment"
   },
   "task": "opticnerve_merfish_spatial_colocalization_enrichment",
-  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/opticnerve_merfish_spatial_colocalization_enrichment.json",
+  "task_spec": "evals/opticnerve_merfish_spatial_colocalization_enrichment/eval.json",
   "trial_index": 1
 }
