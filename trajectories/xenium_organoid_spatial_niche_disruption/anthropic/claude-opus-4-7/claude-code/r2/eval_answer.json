@@ -1,0 +1,16 @@
+{
+  "top_3_niche_changes": [
+    {
+      "niche": "developing_neuronal_niche",
+      "abundance_ordering": "WT ~ PRO > MES"
+    },
+    {
+      "niche": "astroglial_niche",
+      "abundance_ordering": "MES > WT ~ PRO"
+    },
+    {
+      "niche": "neural_crest_off_target_niche",
+      "abundance_ordering": "MES > WT ~ PRO"
+    }
+  ]
+}

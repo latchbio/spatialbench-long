@@ -1,0 +1,77 @@
+{
+  "agent_runtime_seconds": 355,
+  "eval_timeout_seconds": 18000,
+  "harness": "pi",
+  "latch_eval_tools_version": "0.3.14",
+  "model_name": "xai/grok-4.3",
+  "n_trials": 3,
+  "result": {
+    "agent_answer": {
+      "compartment_polarity": "np_baseline > tumor_baseline",
+      "niche_collagen_vs_tumor": "niche_collagen > tumor_collagen_baseline",
+      "perineural_closer_states": [
+        "basal_pdac",
+        "fibroblast_high_pdac"
+      ],
+      "section_mix_artifact_states": [
+        "pdac_tumor",
+        "mixed_pdac_state"
+      ]
+    },
+    "grader_result": {
+      "agent_answer": {
+        "compartment_polarity": "np_baseline > tumor_baseline",
+        "niche_collagen_vs_tumor": "niche_collagen > tumor_collagen_baseline",
+        "perineural_closer_states": [
+          "basal_pdac",
+          "fibroblast_high_pdac"
+        ],
+        "section_mix_artifact_states": [
+          "pdac_tumor",
+          "mixed_pdac_state"
+        ]
+      },
+      "field_scores": {
+        "compartment_polarity_tumor_farther_or_tied": 0.0,
+        "niche_collagen_greater_than_tumor_baseline": 1.0,
+        "perineural_closer_states_set_eq": 0.0,
+        "section_mix_artifact_states_set_eq": 0.0
+      },
+      "metrics": {
+        "hard_fail_triggered": [
+          "f3_contains_generic_pni_or_cross_cancer_decoy"
+        ],
+        "pass_rule": "min_passing",
+        "scoring_count": 4,
+        "scoring_passed": 1,
+        "scoring_total_score": 1.0
+      },
+      "passed": false,
+      "reasoning": "all_of [pass_rule=min_passing]: FAIL\n  x compartment_polarity_tumor_farther_or_tied: passed=False, score=0.0\n  + niche_collagen_greater_than_tumor_baseline: passed=True, score=1.0\n  x section_mix_artifact_states_set_eq: passed=False, score=0.0\n  x perineural_closer_states_set_eq: passed=False, score=0.0\n  + hard_fail 'f3_contains_framework_synonym_or_subtype_alternate': not triggered\n  + hard_fail 'f4_contains_framework_synonym_or_subtype_alternate': not triggered\n  x hard_fail 'f3_contains_generic_pni_or_cross_cancer_decoy': TRIGGERED\n  + hard_fail 'f4_contains_generic_pni_or_cross_cancer_decoy': not triggered",
+      "score": 1.0
+    },
+    "metadata": {
+      "duration_s": 341.11,
+      "eval_timeout_seconds": 18000,
+      "memory_limit_bytes": 32212254720,
+      "model": "xai/grok-4.3",
+      "n_turns": 11,
+      "oom_detected": false,
+      "oom_restarts": 0,
+      "session_id": "019e48b8-4f97-7bbf-984b-7af6b627eb26",
+      "timed_out": false,
+      "total_cost": 0.029577400000000004,
+      "usage": {
+        "cache_read_tokens": 46912,
+        "cache_write_tokens": 0,
+        "input_tokens": 15014,
+        "output_tokens": 571
+      }
+    },
+    "passed": false,
+    "test_id": "visium_perineural_proximity"
+  },
+  "task": "visium_perineural_proximity",
+  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/1_5_visium_perineural_proximity.json",
+  "trial_index": 1
+}

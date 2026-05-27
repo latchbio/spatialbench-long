@@ -1,0 +1,110 @@
+{
+  "agent_runtime_seconds": 204,
+  "eval_timeout_seconds": 18000,
+  "harness": "pi",
+  "latch_eval_tools_version": "0.3.14",
+  "model_name": "xai/grok-4.3",
+  "n_trials": 3,
+  "result": {
+    "agent_answer": {
+      "most_depleted_pair": {
+        "cell_type_A": "Oligodendrocyte",
+        "cell_type_B": "Schwann_cell",
+        "enrichment_category": "strongly_depleted"
+      },
+      "top_3_colocalized_pairs": [
+        {
+          "cell_type_A": "Neuron",
+          "cell_type_B": "T_cell",
+          "enrichment_category": "strongly_enriched"
+        },
+        {
+          "cell_type_A": "Neuron",
+          "cell_type_B": "Pericyte",
+          "enrichment_category": "strongly_enriched"
+        },
+        {
+          "cell_type_A": "Fibroblast_Mural",
+          "cell_type_B": "Schwann_cell",
+          "enrichment_category": "strongly_enriched"
+        }
+      ]
+    },
+    "grader_result": {
+      "agent_answer": {
+        "most_depleted_pair": {
+          "cell_type_A": "Oligodendrocyte",
+          "cell_type_B": "Schwann_cell",
+          "enrichment_category": "strongly_depleted"
+        },
+        "top_3_colocalized_pairs": [
+          {
+            "cell_type_A": "Neuron",
+            "cell_type_B": "T_cell",
+            "enrichment_category": "strongly_enriched"
+          },
+          {
+            "cell_type_A": "Neuron",
+            "cell_type_B": "Pericyte",
+            "enrichment_category": "strongly_enriched"
+          },
+          {
+            "cell_type_A": "Fibroblast_Mural",
+            "cell_type_B": "Schwann_cell",
+            "enrichment_category": "strongly_enriched"
+          }
+        ]
+      },
+      "field_scores": {
+        "depleted_alternate_identity": 0.0,
+        "depleted_canonical_base": 0.0,
+        "depleted_canonical_bonus": 0.0,
+        "depleted_category": 0.0,
+        "slot0_alternate_identity": 0.0,
+        "slot0_canonical_base": 0.0,
+        "slot0_canonical_bonus": 0.0,
+        "slot0_category": 0.0,
+        "slot1_category": 0.0,
+        "slot1_identity": 0.0,
+        "slot2_category": 0.0,
+        "slot2_identity": 0.0
+      },
+      "metrics": {
+        "hard_fail_triggered": [
+          "fibroblast_mural_in_top3",
+          "vocab_distractor_in_top3"
+        ],
+        "pass_rule": "score_threshold",
+        "scoring_count": 12,
+        "scoring_passed": 0,
+        "scoring_total_score": 0.0
+      },
+      "passed": false,
+      "reasoning": "all_of [pass_rule=score_threshold]: FAIL\n  x slot0_canonical_base: passed=False, score=0.0\n  x slot0_canonical_bonus: passed=False, score=0.0\n  x slot0_alternate_identity: passed=False, score=0.0\n  x slot0_category: passed=False, score=0.0\n  x slot1_identity: passed=False, score=0.0\n  x slot1_category: passed=False, score=0.0\n  x slot2_identity: passed=False, score=0.0\n  x slot2_category: passed=False, score=0.0\n  x depleted_canonical_base: passed=False, score=0.0\n  x depleted_canonical_bonus: passed=False, score=0.0\n  x depleted_alternate_identity: passed=False, score=0.0\n  x depleted_category: passed=False, score=0.0\n  + hard_fail 'microglia_tcell_in_top3': not triggered\n  x hard_fail 'fibroblast_mural_in_top3': TRIGGERED\n  + hard_fail 'homotypic_pair_in_top3': not triggered\n  + hard_fail 'astrocyte_tcell_as_depleted': not triggered\n  x hard_fail 'vocab_distractor_in_top3': TRIGGERED",
+      "score": 0.0
+    },
+    "metadata": {
+      "duration_s": 202.08,
+      "eval_timeout_seconds": 18000,
+      "memory_limit_bytes": 32212254720,
+      "model": "xai/grok-4.3",
+      "n_turns": 17,
+      "oom_detected": false,
+      "oom_restarts": 0,
+      "session_id": "019e48c1-a808-72e6-a1ed-6a8586ee2c62",
+      "timed_out": false,
+      "total_cost": 0.036844400000000006,
+      "usage": {
+        "cache_read_tokens": 84672,
+        "cache_write_tokens": 0,
+        "input_tokens": 8952,
+        "output_tokens": 3488
+      }
+    },
+    "passed": false,
+    "test_id": "opticnerve_merfish_spatial_colocalization_enrichment"
+  },
+  "task": "opticnerve_merfish_spatial_colocalization_enrichment",
+  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/opticnerve_merfish_spatial_colocalization_enrichment.json",
+  "trial_index": 1
+}

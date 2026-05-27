@@ -1,0 +1,14 @@
+{
+  "id": "opticnerve_merfish_spatial_colocalization_enrichment",
+  "task": "Mouse optic nerve sections profiled by single-cell spatial transcriptomics. Three distinct experimental conditions are present in `obs.condition`, identified ONLY as `condition_A`, `condition_B`, and `condition_C`. These three labels correspond to {adult, aged, aged_intervention} in some unknown order; the mapping is intentionally hidden and you do NOT need to identify it.\n\nThe h5ad provides a raw cell \u00d7 gene count matrix, 2D spatial coordinates per cell, and a small set of `obs` columns (`section`, `condition`, `fov`, `volume`). `vocabulary.json` provides the controlled label sets you must select from.\n\nIdentify which cell-type pairs show the strongest spatial co-localization (enriched beyond chance) and which pair shows the strongest spatial avoidance (depleted below chance) in this tissue.\n\nReport:\n(1) The top 3 heterotypic (cross-cell-type) pairs with the strongest spatial co-localization, ordered from highest to lowest, each with its enrichment magnitude category.\n(2) The single heterotypic pair with the strongest spatial avoidance, with its enrichment magnitude category.\n\nReturn EXACTLY:\n<EVAL_ANSWER>\n{\"top_3_colocalized_pairs\": [{\"cell_type_A\": \"<type>\", \"cell_type_B\": \"<type>\", \"enrichment_category\": \"<category>\"}, {\"cell_type_A\": \"<type>\", \"cell_type_B\": \"<type>\", \"enrichment_category\": \"<category>\"}, {\"cell_type_A\": \"<type>\", \"cell_type_B\": \"<type>\", \"enrichment_category\": \"<category>\"}], \"most_depleted_pair\": {\"cell_type_A\": \"<type>\", \"cell_type_B\": \"<type>\", \"enrichment_category\": \"<category>\"}}\n</EVAL_ANSWER>",
+  "data_node": [
+    "latch://205404435.node",
+    "latch://205404432.node"
+  ],
+  "metadata": {
+    "task": "spatial_analysis",
+    "time_horizon": "long",
+    "kit": "merfish",
+    "graded_biological_result": "Discovery of cell-type spatial partnerships and avoidances in mouse optic nerve \u2014 specifically that T-cell infiltration routes are astrocyte-associated rather than microglia-associated, and that perivascular/parenchymal compartmentalization drives the strongest spatial avoidance."
+  }
+}

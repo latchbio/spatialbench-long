@@ -1,0 +1,20 @@
+{
+  "evals": [
+    {
+      "id": "opticnerve_merfish_spatial_colocalization_enrichment",
+      "path": "evals/opticnerve_merfish_spatial_colocalization_enrichment/eval.json"
+    },
+    {
+      "id": "visium_perineural_proximity",
+      "path": "evals/visium_perineural_proximity/eval.json"
+    },
+    {
+      "id": "lineage_metastasis_multilayer_niche_mapping",
+      "path": "evals/lineage_metastasis_multilayer_niche_mapping/eval.json"
+    },
+    {
+      "id": "xenium_organoid_spatial_niche_disruption",
+      "path": "evals/xenium_organoid_spatial_niche_disruption/eval.json"
+    }
+  ]
+}

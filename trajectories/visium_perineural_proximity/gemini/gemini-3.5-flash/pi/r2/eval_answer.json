@@ -1,0 +1,12 @@
+{
+  "compartment_polarity": "tumor_baseline > np_baseline",
+  "niche_collagen_vs_tumor": "niche_collagen > tumor_collagen_baseline",
+  "section_mix_artifact_states": [
+    "classical_pdac",
+    "basal_pdac"
+  ],
+  "perineural_closer_states": [
+    "intermediate_pdac",
+    "fibroblast_high_pdac"
+  ]
+}

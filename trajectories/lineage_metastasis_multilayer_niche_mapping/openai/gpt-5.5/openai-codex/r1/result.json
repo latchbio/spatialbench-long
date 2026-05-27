@@ -1,0 +1,144 @@
+{
+  "agent_runtime_seconds": 63,
+  "eval_timeout_seconds": 18000,
+  "harness": "openai-codex",
+  "latch_eval_tools_version": "0.3.14",
+  "model_name": "gpt-5.5",
+  "n_trials": 3,
+  "result": {
+    "agent_answer": {
+      "diagnostics": {
+        "notes": "Calls require concordant direction across all four primary layers; positive low-minus-high delta is enriched in met-like primary regions and negative delta is depleted. Mixed-direction or unscored neighborhood labels were rejected/ambiguous."
+      },
+      "metastatic_niche_program_calls": [
+        {
+          "direction": "enriched",
+          "program": "EMT"
+        },
+        {
+          "direction": "enriched",
+          "program": "hypoxia"
+        },
+        {
+          "direction": "enriched",
+          "program": "immunosuppressive_macrophage"
+        },
+        {
+          "direction": "enriched",
+          "program": "metastasis_program"
+        },
+        {
+          "direction": "enriched",
+          "program": "fibrotic_program"
+        },
+        {
+          "direction": "enriched",
+          "program": "myogenesis"
+        },
+        {
+          "direction": "depleted",
+          "program": "alveolar_differentiation"
+        },
+        {
+          "direction": "depleted",
+          "program": "gastric_endoderm"
+        }
+      ],
+      "rejected_or_ambiguous_programs": [
+        "TGFb_signaling",
+        "collagen_deposition",
+        "pan_macrophage",
+        "scavenger_macrophage",
+        "fibrosis_2",
+        "axon_guidance",
+        "blood_vessel_program",
+        "mesothelial_neighborhood",
+        "endothelial_neighborhood",
+        "muscle_neighborhood"
+      ]
+    },
+    "grader_result": {
+      "agent_answer": {
+        "diagnostics": {
+          "notes": "Calls require concordant direction across all four primary layers; positive low-minus-high delta is enriched in met-like primary regions and negative delta is depleted. Mixed-direction or unscored neighborhood labels were rejected/ambiguous."
+        },
+        "metastatic_niche_program_calls": [
+          {
+            "direction": "enriched",
+            "program": "EMT"
+          },
+          {
+            "direction": "enriched",
+            "program": "hypoxia"
+          },
+          {
+            "direction": "enriched",
+            "program": "immunosuppressive_macrophage"
+          },
+          {
+            "direction": "enriched",
+            "program": "metastasis_program"
+          },
+          {
+            "direction": "enriched",
+            "program": "fibrotic_program"
+          },
+          {
+            "direction": "enriched",
+            "program": "myogenesis"
+          },
+          {
+            "direction": "depleted",
+            "program": "alveolar_differentiation"
+          },
+          {
+            "direction": "depleted",
+            "program": "gastric_endoderm"
+          }
+        ],
+        "rejected_or_ambiguous_programs": [
+          "TGFb_signaling",
+          "collagen_deposition",
+          "pan_macrophage",
+          "scavenger_macrophage",
+          "fibrosis_2",
+          "axon_guidance",
+          "blood_vessel_program",
+          "mesothelial_neighborhood",
+          "endothelial_neighborhood",
+          "muscle_neighborhood"
+        ]
+      },
+      "field_scores": {
+        "accepted program directions match ground truth": 0.0,
+        "accepted program names exactly match ground truth": 0.0,
+        "rejected or ambiguous programs exactly match ground truth": 0.0
+      },
+      "metrics": {
+        "hard_fail_triggered": [],
+        "pass_rule": "all",
+        "scoring_count": 3,
+        "scoring_passed": 0,
+        "scoring_total_score": 0.0
+      },
+      "passed": false,
+      "reasoning": "all_of [pass_rule=all]: FAIL\n  x accepted program names exactly match ground truth: passed=False, score=0.0\n  x accepted program directions match ground truth: passed=False, score=0.0\n  x rejected or ambiguous programs exactly match ground truth: passed=False, score=0.0",
+      "score": 0.0
+    },
+    "metadata": {
+      "duration_s": 62.01,
+      "eval_timeout_seconds": 18000,
+      "memory_limit_bytes": 32212254720,
+      "model": "gpt-5.5",
+      "oom_detected": false,
+      "oom_restarts": 0,
+      "thread_id": "019e48ca-c0db-74c3-a6fe-1f334d51cb6c",
+      "timed_out": false
+    },
+    "passed": false,
+    "test_id": "lineage_metastasis_multilayer_niche_mapping"
+  },
+  "task": "lineage_metastasis_multilayer_niche_mapping",
+  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/lineage_metastasis_multilayer_niche_mapping.json",
+  "trial_index": 1
+}

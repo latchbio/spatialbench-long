@@ -1,0 +1,65 @@
+{
+  "schema_version": 3,
+  "description": "Controlled vocabulary for spatial co-localization analysis in mouse optic nerve. Three distinct experimental conditions are present in `obs.condition`, identified ONLY as `condition_A`, `condition_B`, and `condition_C`. An enrichment ratio > 1.0 indicates spatial co-localization beyond chance, < 1.0 indicates spatial avoidance.",
+  "cell_type_vocabulary_A": [
+    "Astrocyte",
+    "Endothelial",
+    "Fibroblast_Mural",
+    "Microglia",
+    "OPC",
+    "Oligodendrocyte",
+    "T_cell",
+    "Pericyte",
+    "BAM",
+    "Dendritic_cell",
+    "NK_cell",
+    "Monocyte",
+    "Schwann_cell",
+    "Neuron",
+    "Neutrophil",
+    "B_cell"
+  ],
+  "cell_type_vocabulary_B": [
+    "Astrocyte",
+    "Endothelial",
+    "Fibroblast_Mural",
+    "Microglia",
+    "OPC",
+    "Oligodendrocyte",
+    "T_cell",
+    "Pericyte",
+    "BAM",
+    "Dendritic_cell",
+    "NK_cell",
+    "Monocyte",
+    "Schwann_cell",
+    "Neuron",
+    "Neutrophil",
+    "B_cell"
+  ],
+  "enrichment_category_vocabulary": [
+    "strongly_enriched",
+    "moderately_enriched",
+    "weakly_enriched",
+    "near_random",
+    "weakly_depleted",
+    "moderately_depleted",
+    "strongly_depleted"
+  ],
+  "enrichment_category_descriptions": {
+    "strongly_enriched": "Enrichment ratio >= 1.5; cells strongly co-localize beyond chance expectation.",
+    "moderately_enriched": "Enrichment ratio 1.2–1.5; cells reliably co-localize above chance.",
+    "weakly_enriched": "Enrichment ratio 1.05–1.2; slight spatial preference barely above random.",
+    "near_random": "Enrichment ratio 0.9–1.05; spatial distribution indistinguishable from random.",
+    "weakly_depleted": "Enrichment ratio 0.7–0.9; cells mildly avoid each other spatially.",
+    "moderately_depleted": "Enrichment ratio 0.4–0.7; cells actively avoid each other.",
+    "strongly_depleted": "Enrichment ratio < 0.4; cells found in completely separate spatial compartments."
+  },
+  "answer_conventions": {
+    "cell_type_A": "Exactly one label from `cell_type_vocabulary_A`. The first cell type in the pair (alphabetically earlier).",
+    "cell_type_B": "Exactly one label from `cell_type_vocabulary_B`. The second cell type in the pair (alphabetically later). Must differ from cell_type_A (heterotypic pairs only).",
+    "enrichment_category": "Exactly one label from `enrichment_category_vocabulary` describing the magnitude of spatial co-localization for this pair.",
+    "top_k_rule": "Return exactly 3 heterotypic pairs with the STRONGEST spatial co-localization, ordered from highest to lowest.",
+    "depleted_rule": "Return the single heterotypic pair with the STRONGEST spatial avoidance."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "description": "Vocabulary for the primary-tumor metastasis-niche program eval. The eval asks agents to report gene-expression program directions in the primary pro-metastatic niche.",
+  "niche_categories": [
+    "EMT",
+    "hypoxia",
+    "immunosuppressive_macrophage",
+    "metastasis_program",
+    "fibrotic_program",
+    "TGFb_signaling",
+    "collagen_deposition",
+    "pan_macrophage",
+    "scavenger_macrophage",
+    "blood_vessel_program",
+    "axon_guidance",
+    "fibrosis_2",
+    "myogenesis",
+    "mesothelial_neighborhood",
+    "endothelial_neighborhood",
+    "muscle_neighborhood",
+    "alveolar_differentiation",
+    "gastric_endoderm"
+  ],
+  "direction_labels": [
+    "enriched",
+    "depleted"
+  ],
+  "answer_conventions": {
+    "metastatic_niche_program_calls": "List of objects with keys program and direction. Program values must come from niche_categories and direction values from direction_labels. Direction is relative to non-met-like regions of the same shared primary tumor. Order does not matter.",
+    "rejected_or_ambiguous_programs": "Unordered set of candidate niche_categories that the agent determines are not robust primary pro-metastatic gene-expression program changes.",
+    "diagnostics": "Optional free-form evidence, including per-layer deltas, layer counts, thresholds, or plots. Diagnostics are not directly scored but are useful for audit."
+  },
+  "glossary": {
+    "collagen_deposition": "Collagen/ECM program including Col1a1, Col1a2, Col3a1, Col5a1, Col12a1, Acta2.",
+    "fibrosis_2": "Postn/Acta2/Cthrc1/Pdgfra/Timp1/Vcan fibrosis marker score.",
+    "myogenesis": "Myogenesis marker program.",
+    "blood_vessel_program": "Blood-vessel/endothelial program including Hbb/Hba/Pecam1-style markers.",
+    "mesothelial_neighborhood": "Mesothelial fraction or marker signal in spatial neighborhoods around met-like primary-tumor spots.",
+    "EMT": "Epithelial-to-mesenchymal transition program.",
+    "hypoxia": "Low-oxygen / HIF-response program.",
+    "immunosuppressive_macrophage": "Macrophage program with immunosuppressive marker genes such as Arg1/Fcgr-family/Spp1-like markers.",
+    "scavenger_macrophage": "Macrophage scavenger-receptor program such as Mrc1/Msr1/C1q-like markers.",
+    "TGFb_signaling": "Transforming growth factor beta ligand / SMAD signaling program.",
+    "fibrotic_program": "Broad fibrosis / stromal-remodeling marker program.",
+    "alveolar_differentiation": "Alveolar epithelial differentiation program.",
+    "gastric_endoderm": "Gastric-like / endoderm-like differentiation program.",
+    "metastasis_program": "Metastasis-associated marker program."
+  }
+}

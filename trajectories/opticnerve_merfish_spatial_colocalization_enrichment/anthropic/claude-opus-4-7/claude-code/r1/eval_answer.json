@@ -1,0 +1,24 @@
+{
+  "top_3_colocalized_pairs": [
+    {
+      "cell_type_A": "Fibroblast_Mural",
+      "cell_type_B": "Pericyte",
+      "enrichment_category": "strongly_enriched"
+    },
+    {
+      "cell_type_A": "Fibroblast_Mural",
+      "cell_type_B": "Monocyte",
+      "enrichment_category": "strongly_enriched"
+    },
+    {
+      "cell_type_A": "BAM",
+      "cell_type_B": "Pericyte",
+      "enrichment_category": "strongly_enriched"
+    }
+  ],
+  "most_depleted_pair": {
+    "cell_type_A": "Astrocyte",
+    "cell_type_B": "Monocyte",
+    "enrichment_category": "strongly_depleted"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "metastatic_niche_program_calls": [
+    {
+      "program": "EMT",
+      "direction": "enriched"
+    },
+    {
+      "program": "hypoxia",
+      "direction": "enriched"
+    },
+    {
+      "program": "immunosuppressive_macrophage",
+      "direction": "enriched"
+    },
+    {
+      "program": "metastasis_program",
+      "direction": "enriched"
+    },
+    {
+      "program": "fibrotic_program",
+      "direction": "enriched"
+    },
+    {
+      "program": "myogenesis",
+      "direction": "enriched"
+    },
+    {
+      "program": "alveolar_differentiation",
+      "direction": "depleted"
+    },
+    {
+      "program": "gastric_endoderm",
+      "direction": "depleted"
+    }
+  ],
+  "rejected_or_ambiguous_programs": [
+    "TGFb_signaling",
+    "collagen_deposition",
+    "pan_macrophage",
+    "scavenger_macrophage",
+    "fibrosis_2",
+    "axon_guidance",
+    "blood_vessel_program",
+    "mesothelial_neighborhood",
+    "endothelial_neighborhood",
+    "muscle_neighborhood"
+  ],
+  "diagnostics": {
+    "notes": "Calls require concordant direction across all four primary layers; positive low-minus-high delta is enriched in met-like primary regions and negative delta is depleted. Mixed-direction or unscored neighborhood labels were rejected/ambiguous."
+  }
+}

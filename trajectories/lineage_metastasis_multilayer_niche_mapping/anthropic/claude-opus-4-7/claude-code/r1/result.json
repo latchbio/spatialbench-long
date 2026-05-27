@@ -1,0 +1,143 @@
+{
+  "agent_runtime_seconds": 79,
+  "eval_timeout_seconds": 18000,
+  "harness": "claude-code",
+  "latch_eval_tools_version": "0.3.14",
+  "model_name": "anthropic/claude-opus-4-7",
+  "n_trials": 3,
+  "result": {
+    "agent_answer": {
+      "diagnostics": {
+        "notes": "Calls based on per-sample direction consistency across 4 primary-tumor samples (low=met-like vs high=non-met-like). Robust calls require 4/4 samples to agree in sign with a nontrivial combined delta_low_minus_high. Enriched in met-like primary (combined delta>0, 4/4): EMT (+0.65), immunosuppressive_macrophage (+0.49), hypoxia (+0.47), metastasis_program (+0.33), fibrotic_program (+0.20), myogenesis (+0.10). Depleted in met-like primary (4/4 negative): alveolar_differentiation (-1.26), gastric_endoderm (-0.64). Rejected as not robust: TGFb_signaling, scavenger_macrophage, pan_macrophage (3/4 directionally consistent, one sample reversed), collagen_deposition, fibrosis_2, axon_guidance, blood_vessel_program (only 2/4 same-direction or near-zero combined delta). mesothelial_neighborhood, endothelial_neighborhood, muscle_neighborhood absent from program score table \u2014 no evidence to support a call."
+      },
+      "metastatic_niche_program_calls": [
+        {
+          "direction": "enriched",
+          "program": "EMT"
+        },
+        {
+          "direction": "enriched",
+          "program": "immunosuppressive_macrophage"
+        },
+        {
+          "direction": "enriched",
+          "program": "hypoxia"
+        },
+        {
+          "direction": "enriched",
+          "program": "metastasis_program"
+        },
+        {
+          "direction": "enriched",
+          "program": "fibrotic_program"
+        },
+        {
+          "direction": "enriched",
+          "program": "myogenesis"
+        },
+        {
+          "direction": "depleted",
+          "program": "gastric_endoderm"
+        },
+        {
+          "direction": "depleted",
+          "program": "alveolar_differentiation"
+        }
+      ],
+      "rejected_or_ambiguous_programs": [
+        "TGFb_signaling",
+        "scavenger_macrophage",
+        "collagen_deposition",
+        "pan_macrophage",
+        "fibrosis_2",
+        "axon_guidance",
+        "blood_vessel_program",
+        "mesothelial_neighborhood",
+        "endothelial_neighborhood",
+        "muscle_neighborhood"
+      ]
+    },
+    "grader_result": {
+      "agent_answer": {
+        "diagnostics": {
+          "notes": "Calls based on per-sample direction consistency across 4 primary-tumor samples (low=met-like vs high=non-met-like). Robust calls require 4/4 samples to agree in sign with a nontrivial combined delta_low_minus_high. Enriched in met-like primary (combined delta>0, 4/4): EMT (+0.65), immunosuppressive_macrophage (+0.49), hypoxia (+0.47), metastasis_program (+0.33), fibrotic_program (+0.20), myogenesis (+0.10). Depleted in met-like primary (4/4 negative): alveolar_differentiation (-1.26), gastric_endoderm (-0.64). Rejected as not robust: TGFb_signaling, scavenger_macrophage, pan_macrophage (3/4 directionally consistent, one sample reversed), collagen_deposition, fibrosis_2, axon_guidance, blood_vessel_program (only 2/4 same-direction or near-zero combined delta). mesothelial_neighborhood, endothelial_neighborhood, muscle_neighborhood absent from program score table \u2014 no evidence to support a call."
+        },
+        "metastatic_niche_program_calls": [
+          {
+            "direction": "enriched",
+            "program": "EMT"
+          },
+          {
+            "direction": "enriched",
+            "program": "immunosuppressive_macrophage"
+          },
+          {
+            "direction": "enriched",
+            "program": "hypoxia"
+          },
+          {
+            "direction": "enriched",
+            "program": "metastasis_program"
+          },
+          {
+            "direction": "enriched",
+            "program": "fibrotic_program"
+          },
+          {
+            "direction": "enriched",
+            "program": "myogenesis"
+          },
+          {
+            "direction": "depleted",
+            "program": "gastric_endoderm"
+          },
+          {
+            "direction": "depleted",
+            "program": "alveolar_differentiation"
+          }
+        ],
+        "rejected_or_ambiguous_programs": [
+          "TGFb_signaling",
+          "scavenger_macrophage",
+          "collagen_deposition",
+          "pan_macrophage",
+          "fibrosis_2",
+          "axon_guidance",
+          "blood_vessel_program",
+          "mesothelial_neighborhood",
+          "endothelial_neighborhood",
+          "muscle_neighborhood"
+        ]
+      },
+      "field_scores": {
+        "accepted program directions match ground truth": 0.0,
+        "accepted program names exactly match ground truth": 0.0,
+        "rejected or ambiguous programs exactly match ground truth": 0.0
+      },
+      "metrics": {
+        "hard_fail_triggered": [],
+        "pass_rule": "all",
+        "scoring_count": 3,
+        "scoring_passed": 0,
+        "scoring_total_score": 0.0
+      },
+      "passed": false,
+      "reasoning": "all_of [pass_rule=all]: FAIL\n  x accepted program names exactly match ground truth: passed=False, score=0.0\n  x accepted program directions match ground truth: passed=False, score=0.0\n  x rejected or ambiguous programs exactly match ground truth: passed=False, score=0.0",
+      "score": 0.0
+    },
+    "metadata": {
+      "duration_s": 78.02,
+      "eval_timeout_seconds": 18000,
+      "memory_limit_bytes": 32212254720,
+      "model": "anthropic/claude-opus-4-7",
+      "oom_detected": false,
+      "oom_restarts": 0,
+      "timed_out": false
+    },
+    "passed": false,
+    "test_id": "lineage_metastasis_multilayer_niche_mapping"
+  },
+  "task": "lineage_metastasis_multilayer_niche_mapping",
+  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/lineage_metastasis_multilayer_niche_mapping.json",
+  "trial_index": 1
+}

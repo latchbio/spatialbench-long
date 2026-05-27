@@ -1,0 +1,51 @@
+{
+  "metastatic_niche_program_calls": [
+    {
+      "program": "EMT",
+      "direction": "enriched"
+    },
+    {
+      "program": "immunosuppressive_macrophage",
+      "direction": "enriched"
+    },
+    {
+      "program": "hypoxia",
+      "direction": "enriched"
+    },
+    {
+      "program": "metastasis_program",
+      "direction": "enriched"
+    },
+    {
+      "program": "fibrotic_program",
+      "direction": "enriched"
+    },
+    {
+      "program": "myogenesis",
+      "direction": "enriched"
+    },
+    {
+      "program": "gastric_endoderm",
+      "direction": "depleted"
+    },
+    {
+      "program": "alveolar_differentiation",
+      "direction": "depleted"
+    }
+  ],
+  "rejected_or_ambiguous_programs": [
+    "TGFb_signaling",
+    "collagen_deposition",
+    "pan_macrophage",
+    "scavenger_macrophage",
+    "blood_vessel_program",
+    "axon_guidance",
+    "fibrosis_2",
+    "mesothelial_neighborhood",
+    "endothelial_neighborhood",
+    "muscle_neighborhood"
+  ],
+  "diagnostics": {
+    "notes": "Programs were classified as robust (either enriched or depleted) if they showed consistent delta direction in all 4 individual primary tumor samples (same_direction_samples == 4). Programs with inconsistent directions across samples or completely missing from the results were classified as rejected or ambiguous."
+  }
+}

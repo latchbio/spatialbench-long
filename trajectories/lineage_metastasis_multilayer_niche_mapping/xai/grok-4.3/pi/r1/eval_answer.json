@@ -1,0 +1,13 @@
+{
+  "metastatic_niche_program_calls": [
+    {"program": "alveolar_differentiation", "direction": "enriched"},
+    {"program": "gastric_endoderm", "direction": "enriched"},
+    {"program": "EMT", "direction": "depleted"},
+    {"program": "hypoxia", "direction": "depleted"},
+    {"program": "immunosuppressive_macrophage", "direction": "depleted"},
+    {"program": "metastasis_program", "direction": "depleted"},
+    {"program": "fibrotic_program", "direction": "depleted"}
+  ],
+  "rejected_or_ambiguous_programs": ["TGFb_signaling", "collagen_deposition", "fibrosis_2", "scavenger_macrophage", "myogenesis", "pan_macrophage", "blood_vessel_program", "axon_guidance"],
+  "diagnostics": {"notes": "Based on combined_primary delta_low_minus_high and layer consistency: negative deltas (enriched in high/met-like) for alveolar/gastric; positive consistent deltas (depleted) for EMT/hypoxia/etc. across 4 samples."}
+}

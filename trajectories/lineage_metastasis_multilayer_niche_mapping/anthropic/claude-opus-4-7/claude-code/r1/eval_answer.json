@@ -1,0 +1,27 @@
+{
+  "metastatic_niche_program_calls": [
+    {"program": "EMT", "direction": "enriched"},
+    {"program": "immunosuppressive_macrophage", "direction": "enriched"},
+    {"program": "hypoxia", "direction": "enriched"},
+    {"program": "metastasis_program", "direction": "enriched"},
+    {"program": "fibrotic_program", "direction": "enriched"},
+    {"program": "myogenesis", "direction": "enriched"},
+    {"program": "gastric_endoderm", "direction": "depleted"},
+    {"program": "alveolar_differentiation", "direction": "depleted"}
+  ],
+  "rejected_or_ambiguous_programs": [
+    "TGFb_signaling",
+    "scavenger_macrophage",
+    "collagen_deposition",
+    "pan_macrophage",
+    "fibrosis_2",
+    "axon_guidance",
+    "blood_vessel_program",
+    "mesothelial_neighborhood",
+    "endothelial_neighborhood",
+    "muscle_neighborhood"
+  ],
+  "diagnostics": {
+    "notes": "Calls based on per-sample direction consistency across 4 primary-tumor samples (low=met-like vs high=non-met-like). Robust calls require 4/4 samples to agree in sign with a nontrivial combined delta_low_minus_high. Enriched in met-like primary (combined delta>0, 4/4): EMT (+0.65), immunosuppressive_macrophage (+0.49), hypoxia (+0.47), metastasis_program (+0.33), fibrotic_program (+0.20), myogenesis (+0.10). Depleted in met-like primary (4/4 negative): alveolar_differentiation (-1.26), gastric_endoderm (-0.64). Rejected as not robust: TGFb_signaling, scavenger_macrophage, pan_macrophage (3/4 directionally consistent, one sample reversed), collagen_deposition, fibrosis_2, axon_guidance, blood_vessel_program (only 2/4 same-direction or near-zero combined delta). mesothelial_neighborhood, endothelial_neighborhood, muscle_neighborhood absent from program score table — no evidence to support a call."
+  }
+}

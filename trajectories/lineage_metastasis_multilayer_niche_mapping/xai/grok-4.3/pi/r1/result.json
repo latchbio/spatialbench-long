@@ -1,0 +1,140 @@
+{
+  "agent_runtime_seconds": 20,
+  "eval_timeout_seconds": 18000,
+  "harness": "pi",
+  "latch_eval_tools_version": "0.3.14",
+  "model_name": "xai/grok-4.3",
+  "n_trials": 3,
+  "result": {
+    "agent_answer": {
+      "diagnostics": {
+        "notes": "Based on combined_primary delta_low_minus_high and layer consistency: negative deltas (enriched in high/met-like) for alveolar/gastric; positive consistent deltas (depleted) for EMT/hypoxia/etc. across 4 samples."
+      },
+      "metastatic_niche_program_calls": [
+        {
+          "direction": "enriched",
+          "program": "alveolar_differentiation"
+        },
+        {
+          "direction": "enriched",
+          "program": "gastric_endoderm"
+        },
+        {
+          "direction": "depleted",
+          "program": "EMT"
+        },
+        {
+          "direction": "depleted",
+          "program": "hypoxia"
+        },
+        {
+          "direction": "depleted",
+          "program": "immunosuppressive_macrophage"
+        },
+        {
+          "direction": "depleted",
+          "program": "metastasis_program"
+        },
+        {
+          "direction": "depleted",
+          "program": "fibrotic_program"
+        }
+      ],
+      "rejected_or_ambiguous_programs": [
+        "TGFb_signaling",
+        "collagen_deposition",
+        "fibrosis_2",
+        "scavenger_macrophage",
+        "myogenesis",
+        "pan_macrophage",
+        "blood_vessel_program",
+        "axon_guidance"
+      ]
+    },
+    "grader_result": {
+      "agent_answer": {
+        "diagnostics": {
+          "notes": "Based on combined_primary delta_low_minus_high and layer consistency: negative deltas (enriched in high/met-like) for alveolar/gastric; positive consistent deltas (depleted) for EMT/hypoxia/etc. across 4 samples."
+        },
+        "metastatic_niche_program_calls": [
+          {
+            "direction": "enriched",
+            "program": "alveolar_differentiation"
+          },
+          {
+            "direction": "enriched",
+            "program": "gastric_endoderm"
+          },
+          {
+            "direction": "depleted",
+            "program": "EMT"
+          },
+          {
+            "direction": "depleted",
+            "program": "hypoxia"
+          },
+          {
+            "direction": "depleted",
+            "program": "immunosuppressive_macrophage"
+          },
+          {
+            "direction": "depleted",
+            "program": "metastasis_program"
+          },
+          {
+            "direction": "depleted",
+            "program": "fibrotic_program"
+          }
+        ],
+        "rejected_or_ambiguous_programs": [
+          "TGFb_signaling",
+          "collagen_deposition",
+          "fibrosis_2",
+          "scavenger_macrophage",
+          "myogenesis",
+          "pan_macrophage",
+          "blood_vessel_program",
+          "axon_guidance"
+        ]
+      },
+      "field_scores": {
+        "accepted program directions match ground truth": 0.0,
+        "accepted program names exactly match ground truth": 0.0,
+        "rejected or ambiguous programs exactly match ground truth": 0.0
+      },
+      "metrics": {
+        "hard_fail_triggered": [],
+        "pass_rule": "all",
+        "scoring_count": 3,
+        "scoring_passed": 0,
+        "scoring_total_score": 0.0
+      },
+      "passed": false,
+      "reasoning": "all_of [pass_rule=all]: FAIL\n  x accepted program names exactly match ground truth: passed=False, score=0.0\n  x accepted program directions match ground truth: passed=False, score=0.0\n  x rejected or ambiguous programs exactly match ground truth: passed=False, score=0.0",
+      "score": 0.0
+    },
+    "metadata": {
+      "duration_s": 18.0,
+      "eval_timeout_seconds": 18000,
+      "memory_limit_bytes": 32212254720,
+      "model": "xai/grok-4.3",
+      "n_turns": 7,
+      "oom_detected": false,
+      "oom_restarts": 0,
+      "session_id": "019e48bf-5a24-75ea-acfd-fe04c248c3be",
+      "timed_out": false,
+      "total_cost": 0.01508245,
+      "usage": {
+        "cache_read_tokens": 24256,
+        "cache_write_tokens": 0,
+        "input_tokens": 7451,
+        "output_tokens": 367
+      }
+    },
+    "passed": false,
+    "test_id": "lineage_metastasis_multilayer_niche_mapping"
+  },
+  "task": "lineage_metastasis_multilayer_niche_mapping",
+  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/lineage_metastasis_multilayer_niche_mapping.json",
+  "trial_index": 1
+}

@@ -1,0 +1,16 @@
+{
+  "top_3_niche_changes": [
+    {
+      "niche": "radial_glial_niche",
+      "abundance_ordering": "PRO > WT > MES"
+    },
+    {
+      "niche": "neuroepithelial_off_target_niche",
+      "abundance_ordering": "MES > WT ~ PRO"
+    },
+    {
+      "niche": "neural_crest_off_target_niche",
+      "abundance_ordering": "MES > WT ~ PRO"
+    }
+  ]
+}

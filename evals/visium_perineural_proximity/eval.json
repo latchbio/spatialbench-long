@@ -1,0 +1,15 @@
+{
+  "id": "visium_perineural_proximity",
+  "task": "Experimental context. These samples are 39 untreated primary PDAC tumors profiled by Visium spatial transcriptomics across 108 H&E sections (transcriptome-wide, ~18 cells per spot, FFPE) with co-registered Masson trichrome on serial slices. Peripheral-nerve niches occur as small focal clusters scattered through cancer-associated stroma. Define cohort baselines: tumor_baseline / np_baseline = cohort-aggregated median spatial distance from a tumor / normal-parenchyma compartment spot to its nearest peripheral-nerve niche; tumor_collagen_baseline / niche_collagen = cohort-aggregated median per-spot trichrome-collagen content for tumor / nerve-niche spots. Smaller distance = closer to nerve.\n\nTask. Provide a 4-facet characterization of peripheral-nerve-niche biology on this cohort: (1) order tumor_baseline vs np_baseline by median nerve-distance; (2) order niche_collagen vs tumor_collagen_baseline by median collagen content; (3) return the unordered top-2 paper-anchored PDAC tumor states whose distinctive cohort-level per-state nerve-distance signal is null-indistinguishable from a tumor-state-shuffle within-tumor permutation null (section-mix artifact, not biology); (4) return the unordered top-2 paper-anchored PDAC tumor states whose median nerve-distance is clearly closer to nerve than tumor_baseline AND survives the tumor-state-shuffle null.\n\nUse compartment_polarity_pattern_vocabulary for facet (1), niche_collagen_pattern_vocabulary for facet (2), and tumor_state_vocabulary for facets (3) and (4) \u2014 all provided in vocabulary.json (data node).\n\nReturn EXACTLY:\n<EVAL_ANSWER>\n{\"compartment_polarity\": \"<pattern_string>\", \"niche_collagen_vs_tumor\": \"<pattern_string>\", \"section_mix_artifact_states\": [\"<state_string>\", \"<state_string>\"], \"perineural_closer_states\": [\"<state_string>\", \"<state_string>\"]}\n</EVAL_ANSWER>",
+  "data_node": [
+    "latch://208517541.node",
+    "latch://208517542.node",
+    "latch://208517565.node"
+  ],
+  "metadata": {
+    "task": "spatial_analysis",
+    "time_horizon": "long",
+    "kit": "visium",
+    "graded_biological_result": "4-facet composite characterization of peripheral-nerve-niche biology on the cohort: (F1) compartment polarity for nerve-distance (tumor vs NP), (F2) niche-collagen co-localization vs cohort tumor median, (F3) tumor states whose per-state perineural distinctiveness is section-mix artifact, (F4) tumor states with cohort-level closer-than-baseline nerve-distance surviving the tumor-state-shuffle null"
+  }
+}

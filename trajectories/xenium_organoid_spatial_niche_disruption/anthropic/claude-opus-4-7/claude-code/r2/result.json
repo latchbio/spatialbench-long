@@ -1,0 +1,78 @@
+{
+  "agent_runtime_seconds": 728,
+  "eval_timeout_seconds": 18000,
+  "harness": "claude-code",
+  "latch_eval_tools_version": "0.3.14",
+  "model_name": "anthropic/claude-opus-4-7",
+  "n_trials": 3,
+  "result": {
+    "agent_answer": {
+      "top_3_niche_changes": [
+        {
+          "abundance_ordering": "WT ~ PRO > MES",
+          "niche": "developing_neuronal_niche"
+        },
+        {
+          "abundance_ordering": "MES > WT ~ PRO",
+          "niche": "astroglial_niche"
+        },
+        {
+          "abundance_ordering": "MES > WT ~ PRO",
+          "niche": "neural_crest_off_target_niche"
+        }
+      ]
+    },
+    "grader_result": {
+      "agent_answer": {
+        "top_3_niche_changes": [
+          {
+            "abundance_ordering": "WT ~ PRO > MES",
+            "niche": "developing_neuronal_niche"
+          },
+          {
+            "abundance_ordering": "MES > WT ~ PRO",
+            "niche": "astroglial_niche"
+          },
+          {
+            "abundance_ordering": "MES > WT ~ PRO",
+            "niche": "neural_crest_off_target_niche"
+          }
+        ]
+      },
+      "field_scores": {
+        "developing_neuronal_niche_ordering": 1.0,
+        "developing_neuronal_niche_present": 1.0,
+        "mesenchymal_niche_ordering": 0.0,
+        "mesenchymal_niche_present": 0.0,
+        "neural_crest_off_target_niche_ordering": 1.0,
+        "neural_crest_off_target_niche_present": 1.0,
+        "neuroepithelial_off_target_niche_ordering": 0.0,
+        "neuroepithelial_off_target_niche_present": 0.0
+      },
+      "metrics": {
+        "hard_fail_triggered": [],
+        "pass_rule": "score_threshold",
+        "scoring_count": 8,
+        "scoring_passed": 4,
+        "scoring_total_score": 4.0
+      },
+      "passed": true,
+      "reasoning": "all_of [pass_rule=score_threshold]: PASS\n  + developing_neuronal_niche_present: passed=True, score=1.0\n  + developing_neuronal_niche_ordering: passed=True, score=1.0\n  x mesenchymal_niche_present: passed=False, score=0.0\n  x mesenchymal_niche_ordering: passed=False, score=0.0\n  x neuroepithelial_off_target_niche_present: passed=False, score=0.0\n  x neuroepithelial_off_target_niche_ordering: passed=False, score=0.0\n  + neural_crest_off_target_niche_present: passed=True, score=1.0\n  + neural_crest_off_target_niche_ordering: passed=True, score=1.0",
+      "score": 4.0
+    },
+    "metadata": {
+      "duration_s": 712.23,
+      "eval_timeout_seconds": 18000,
+      "memory_limit_bytes": 32212254720,
+      "model": "anthropic/claude-opus-4-7",
+      "oom_detected": false,
+      "oom_restarts": 0,
+      "timed_out": false
+    },
+    "passed": true,
+    "test_id": "xenium_organoid_spatial_niche_disruption"
+  },
+  "task": "xenium_organoid_spatial_niche_disruption",
+  "task_spec": "latch://38438.account/spatialbench-long-final/spatialbench_long_benchmark_evals_main_a6aafcd_orion_paths/2_3_A_spatial_niches.json",
+  "trial_index": 2
+}
