@@ -11,11 +11,13 @@ Paper: https://latch.bio/spatialbench-long
 
 | Model | Harness | Runs | Passed | Pass Rate |
 |---|---|---:|---:|---:|
+| claude-opus-4-8 | claude-code | 72 | 8 | 11.11% |
 | gemini-3.5-flash | pi | 72 | 8 | 11.11% |
 | gpt-5.5 | openai-codex | 72 | 8 | 11.11% |
 | gpt-5.5 | pi | 72 | 8 | 11.11% |
 | claude-opus-4-6 | claude-code | 72 | 7 | 9.72% |
 | claude-opus-4-7 | claude-code | 72 | 6 | 8.33% |
+| claude-opus-4-8_max | pi | 72 | 6 | 8.33% |
 | grok-4.20-beta-0309-reasoning | pi | 72 | 5 | 6.94% |
 | claude-opus-4-6 | pi | 72 | 4 | 5.56% |
 | claude-opus-4-7 | pi | 72 | 4 | 5.56% |
