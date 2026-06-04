@@ -2,17 +2,10 @@
 
 **Benchmarking long-horizon spatial biology**
 
-Scientists use spatial biology data in open-ended scientific contexts to
-construct new knowledge about living systems.
-
-SpatialBench-Long evaluates AI agents on their ability to arrive at conclusions
-one might publish in a scientific journal, using the raw data and context a
-scientist would have.
-
-Paper: https://latch.bio/spatialbench-long
-
 This public subset contains four evals, their prompt/vocabulary files,
 agent trajectory examples, and run results.
+
+Paper: https://latch.bio/spatialbench-long
 
 ## Results
 
