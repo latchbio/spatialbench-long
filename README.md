@@ -34,36 +34,6 @@ agent trajectory examples, and run results.
 | grok-4.3 | pi | 72 | 3 | 4.17% |
 | gemini-2.5-pro | pi | 72 | 1 | 1.39% |
 
-## Benchmark Construction Methodology
-
-- Randomized peer attempts
-- Verifiable grading with controlled vocabularies
-- Manual trajectory inspection as a first-class process
-
-### Randomized Peer Attempts
-
-Each eval was passed through randomized peer attempts without solutions. This
-stress-tests design decisions in ground-truth values and task context. It also
-calibrates agent performance against domain experts.
-
-### Verifiable Grading With Controlled Vocabularies
-
-Higher-level scientific claims move beyond numerical grading to written
-conclusions about new biological facts. Grading relies on large controlled
-vocabularies mixed with distractors of increasing specificity.
-
-### Manual Trajectory Inspection
-
-Future models may solve some evals using unanticipated analysis paths that break
-current grading assumptions. Manual inspection of trajectories, aided by LLM
-judges, is part of the benchmark workflow.
-
-## Repository Contents
-
-- `evals/` - public task prompts and vocabularies for the four included evals.
-- `trajectories/` - trajectory JSON, final answers, and run results for
-  selected eval/model/trial runs.
-
 ## Citing
 
 ```bibtex
